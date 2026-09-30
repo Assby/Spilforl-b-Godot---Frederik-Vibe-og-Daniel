@@ -1,6 +1,7 @@
 [gd_scene format=3 uid="uid://dqa01xdajdmpt"]
 
-[ext_resource type="Texture2D" uid="uid://un1kmh0dbmi4" path="res://assets/sprites/platforms.png" id="1_ba0x2"]
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_v4t87"]
+load_path = "res://.godot/imported/platforms.png-3869606db457611ed4193d705dc364e4.ctex"
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_bbpdv"]
 size = Vector2(48, 10)
@@ -8,7 +9,7 @@ size = Vector2(48, 10)
 [node name="AnimatableBody2D" type="AnimatableBody2D" unique_id=316102405]
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=1870808702]
-texture = ExtResource("1_ba0x2")
+texture = SubResource("CompressedTexture2D_v4t87")
 region_enabled = true
 region_rect = Rect2(0, 0, 48, 9)
 
