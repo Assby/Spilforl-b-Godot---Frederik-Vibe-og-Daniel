@@ -1,5 +1,6 @@
 extends Camera2D
 @onready var marker_2d: Marker2D = $"../../Marker2D"
+@onready var player: CharacterBody2D = $".."
 
 func new_level_pan():
 	var pan_position = marker_2d.global_position
@@ -22,3 +23,7 @@ func zoom_in():
 	var tween = create_tween()
 	tween.set_ease(Tween.EASE_IN_OUT)
 	tween.tween_property(self,"zoom",zoom_in,0.5)
+
+
+func _physics_process(delta: float) -> void:
+	global_position = lerp(global_position, player.global_position, 0.1)
