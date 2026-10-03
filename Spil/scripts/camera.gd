@@ -1,6 +1,6 @@
 extends Camera2D
-@onready var marker_2d: Marker2D = $"../../Marker2D"
 @onready var player: CharacterBody2D = $".."
+@onready var marker_2d: Marker2D = $"../Marker2D"
 
 var key_animation
 
