@@ -1050,7 +1050,7 @@ tile_set = SubResource("TileSet_y7tpd")
 tile_set = SubResource("TileSet_pajur")
 
 [node name="Player" parent="." unique_id=1422829108 instance=ExtResource("1_yqjtg")]
-position = Vector2(192, 494)
+position = Vector2(5, -11)
 script = ExtResource("2_lnu2h")
 
 [node name="Camera2D" type="Camera2D" parent="Player" unique_id=452183196]
