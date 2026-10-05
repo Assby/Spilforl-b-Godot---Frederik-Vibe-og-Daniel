@@ -2,7 +2,7 @@ extends CharacterBody2D
 
 const SPEED = 130.0
 const JUMP_VELOCITY = -300.0
-const ICE_SPEED = 200 
+const ICE_SPEED = 200
 #ice movement
 @export var ice_accel = 250
 @export var ice_friction = 100 
