@@ -5,7 +5,7 @@
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_bbpdv"]
 size = Vector2(32, 9)
 
-[node name="AnimatableBody2D" type="AnimatableBody2D" unique_id=671135805]
+[node name="Isblok" type="AnimatableBody2D" unique_id=671135805 groups=["ice"]]
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=192564492]
 texture = ExtResource("1_wf4ms")

@@ -28,6 +28,11 @@ Music="*uid://d2p5iwthtitxx"
 window/stretch/mode="canvas_items"
 window/stretch/aspect="expand"
 
+[global_group]
+
+player=""
+ice=""
+
 [input]
 
 jump={
