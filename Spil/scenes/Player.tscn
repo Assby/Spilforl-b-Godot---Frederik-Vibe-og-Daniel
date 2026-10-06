@@ -2,6 +2,66 @@
 
 [ext_resource type="Texture2D" uid="uid://cfsd4p82x83g" path="res://assets/sprites/knight.png" id="1_p0vlq"]
 
+[sub_resource type="Animation" id="Animation_p0vlq"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:collision_layer")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [2]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath(".:collision_mask")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [1]
+}
+
+[sub_resource type="Animation" id="Animation_v6fml"]
+resource_name = "phase"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:collision_layer")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [0]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath(".:collision_mask")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [0]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_3li8b"]
+_data = {
+&"RESET": SubResource("Animation_p0vlq"),
+&"phase": SubResource("Animation_v6fml")
+}
+
 [sub_resource type="AtlasTexture" id="AtlasTexture_b8lor"]
 atlas = ExtResource("1_p0vlq")
 region = Rect2(0, 224, 32, 32)
@@ -120,6 +180,11 @@ region = Rect2(224, 96, 32, 32)
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_bbpdv"]
 animations = [{
+"frames": [],
+"loop": 1,
+"name": &"Bow_shooting",
+"speed": 5.0
+}, {
 "frames": [{
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_b8lor")
@@ -240,11 +305,13 @@ size = Vector2(11, 19)
 z_index = 5
 collision_layer = 2
 
+[node name="phase" type="AnimationPlayer" parent="." unique_id=484907316]
+libraries/ = SubResource("AnimationLibrary_3li8b")
+
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1498278419]
 position = Vector2(0, -12)
 sprite_frames = SubResource("SpriteFrames_bbpdv")
-animation = &"roll"
-frame_progress = 0.948014
+animation = &"run"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1359610647]
 z_index = 5
