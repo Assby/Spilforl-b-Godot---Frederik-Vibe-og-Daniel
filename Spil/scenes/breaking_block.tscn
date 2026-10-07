@@ -214,7 +214,8 @@ script = ExtResource("1_2s3w7")
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="AnimatableBody2D" unique_id=1546053670]
 position = Vector2(-8, -10)
 sprite_frames = SubResource("SpriteFrames_bbpdv")
-animation = &"Static"
+animation = &"Breaking_test"
+frame_progress = 0.4597022
 centered = false
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="AnimatableBody2D" unique_id=458309395]
