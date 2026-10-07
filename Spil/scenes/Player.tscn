@@ -1,6 +1,7 @@
 [gd_scene format=3 uid="uid://b3hjlgmu1lcvb"]
 
 [ext_resource type="Texture2D" uid="uid://cfsd4p82x83g" path="res://assets/sprites/knight.png" id="1_p0vlq"]
+[ext_resource type="Texture2D" uid="uid://c8xs1in20xj1l" path="res://assets/sprites/Sprite-0001-Sheet.png" id="1_v6fml"]
 
 [sub_resource type="Animation" id="Animation_p0vlq"]
 length = 0.001
@@ -61,6 +62,10 @@ _data = {
 &"RESET": SubResource("Animation_p0vlq"),
 &"phase": SubResource("Animation_v6fml")
 }
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_axnmu"]
+atlas = ExtResource("1_v6fml")
+region = Rect2(37, 37, 37, 37)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_b8lor"]
 atlas = ExtResource("1_p0vlq")
@@ -180,9 +185,24 @@ region = Rect2(224, 96, 32, 32)
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_bbpdv"]
 animations = [{
-"frames": [],
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_axnmu")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_axnmu")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_axnmu")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_axnmu")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_axnmu")
+}],
 "loop": 1,
-"name": &"Bow_shooting",
+"name": &"bow",
 "speed": 5.0
 }, {
 "frames": [{
@@ -301,7 +321,7 @@ animations = [{
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_lnu2h"]
 size = Vector2(11, 19)
 
-[node name="Player" type="CharacterBody2D" unique_id=1422829108]
+[node name="Player" type="CharacterBody2D" unique_id=1422829108 groups=["player"]]
 z_index = 5
 collision_layer = 2
 
@@ -311,7 +331,7 @@ libraries/ = SubResource("AnimationLibrary_3li8b")
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1498278419]
 position = Vector2(0, -12)
 sprite_frames = SubResource("SpriteFrames_bbpdv")
-animation = &"run"
+animation = &"bow"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1359610647]
 z_index = 5

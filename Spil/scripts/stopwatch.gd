@@ -4,6 +4,7 @@ var stopped = false
 
 func reset():
 	time = 0.0
+	stopped = false 
 
 func _process(delta: float) -> void:
 	if stopped:
@@ -17,3 +18,5 @@ func time_to_string() -> String:
 		var format_string = "%02d : %02d : %02d"
 		var string= format_string % [minut,sec,msec]
 		return string
+func stop():
+	stopped = true

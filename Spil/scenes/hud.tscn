@@ -8,7 +8,7 @@
 font = ExtResource("2_hp47d")
 font_size = 8
 
-[node name="HUD" type="Control" unique_id=1177873055]
+[node name="HUD" type="Control" unique_id=1177873055 groups=["stopwatch"]]
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
